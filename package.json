@@ -1,0 +1,9 @@
+{
+  "name":"evidencegraph-soc-triage-lab",
+  "version":"2.0.0",
+  "private":true,
+  "description":"Source-linked SOC triage training lab; offline static demo and optional LLM backend",
+  "scripts":{"test":"node --test tests/test_core.cjs","serve":"python3 -m http.server 8080","validate":"node --test tests/test_core.cjs"},
+  "license":"MIT",
+  "engines":{"node":">=18"}
+}

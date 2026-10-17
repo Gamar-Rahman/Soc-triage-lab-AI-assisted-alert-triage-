@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EvidenceGraph SOC Triage Lab — a human-in-the-loop security investigation training prototype." />
+  <meta name="theme-color" content="#081321" />
+  <title>EvidenceGraph | SOC Triage Lab</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/core.js"></script>
+  <script defer src="js/scenarios.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" aria-label="Workspace sidebar">
+    <div class="brand"><div class="brand-symbol" aria-hidden="true"><span>⌁</span></div><div><div class="brand-name">EVIDENCE<span>GRAPH</span></div><div class="brand-caption">SOC TRIAGE LAB <span class="version">v2.0</span></div></div></div>
+    <div class="sidebar-heading">WORKSPACE</div>
+    <div class="side-route active"><span class="nav-icon">▦</span> Investigation workspace <span class="tiny-dot"></span></div>
+    <div class="side-route"><span class="nav-icon">◫</span> Case intelligence <span class="coming-soon">DEMO</span></div>
+    <div class="side-route"><span class="nav-icon">◉</span> Decision log</div>
+    <div class="separator"></div>
+    <div class="queue-heading"><span>ALERT QUEUE</span><span id="queue-count" class="queue-count">06</span></div>
+    <label class="sr-only" for="search">Search alerts</label>
+    <div class="search-wrap"><span>⌕</span><input id="search" type="search" placeholder="Search alerts…" autocomplete="off" /></div>
+    <div class="filter-pills" aria-label="Filter alerts"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="High">High</button><button class="filter" data-filter="Medium">Medium</button><button class="filter" data-filter="Low">Low</button></div>
+    <div id="queue-list" class="queue-list" aria-label="Cases"></div>
+    <div class="sidebar-bottom"><div class="security-icon">◈</div><div><strong>Training environment</strong><p>Fictional alerts · No live telemetry<br />Read-only by design</p></div></div>
+  </aside>
+  <div class="primary">
+    <header class="topbar"><div class="breadcrumbs">SECURITY OPERATIONS <span>/</span> <strong>INVESTIGATIONS</strong></div><div class="top-actions"><span class="live-status"><i></i> SIMULATED DATA</span><button class="small-button" id="theme-toggle" aria-label="Toggle light or dark theme">◐</button><span class="avatar" title="Demo analyst">DA</span></div></header>
+    <main id="main" class="main-content">
+      <div class="heading-row"><div><div class="eyebrow">CASE INTELLIGENCE / INVESTIGATION WORKSPACE</div><h1>Alert investigation <span class="light-title">/ EvidenceGraph</span></h1><p class="subtitle">From signal to source-linked understanding. AI recommends. Evidence explains. The analyst decides.</p></div><div class="actions-header"><button id="export-button" class="outline-button">↧ &nbsp; Export case</button><button id="copy-handoff" class="primary-button">↗ &nbsp; Copy handoff</button></div></div>
+      <div id="metrics" class="stat-row"></div>
+      <div id="case-summary" class="case-summary"></div>
+      <div class="two-column"><section class="workspace-panel"><div class="tab-bar" role="tablist" aria-label="Case details"><button class="tab active" role="tab" data-tab="overview">Overview</button><button class="tab" role="tab" data-tab="graph">Evidence graph</button><button class="tab" role="tab" data-tab="logs">Source records</button><button class="tab" role="tab" data-tab="handoff">Handoff</button></div><div id="workspace-body" class="workspace-body"></div></section><aside id="decision-panel" class="decision-panel"></aside></div>
+      <div class="footnote"><strong>EDUCATIONAL PROTOTYPE.</strong> Risk scores are illustrative rules, not measured model confidence or incident probabilities. ATT&CK mappings are candidate hypotheses. Validate all decisions with your SOC playbooks. <a href="docs/architecture.md" target="_blank" rel="noopener">Architecture ↗</a></div>
+    </main>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<div id="source-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal"><div class="modal-top"><div><div class="eyebrow">SOURCE-LINKED VERIFICATION</div><h2 id="modal-title">Raw source event</h2></div><button id="close-modal" class="modal-close" aria-label="Close dialog">✕</button></div><div id="modal-body"></div></div></div>
+</body>
+</html>
