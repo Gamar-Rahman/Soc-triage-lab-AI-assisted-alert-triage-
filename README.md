@@ -1,10 +1,23 @@
+
 # EvidenceGraph — SOC Triage Lab v2.0
 
 **AI-assisted cybersecurity alert triage, built around source-linked evidence and human control.**
 
-[![Node tests](https://img.shields.io/badge/tests-Node%20%2B%20pytest-20c2b6)](#quality-gates) [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE) [![Data](https://img.shields.io/badge/data-synthetic%20only-orange)](#safety--scope)
+### Live Interactive Demo
 
-EvidenceGraph is a **functioning security analyst training application** inspired by the Summer 2026 *AI-Assisted Alert Triage / EvidenceGraph Case Builder* innovation project. It is a substantial rebuild of the original three-case SOC Triage Lab concept demo: an offline-ready web dashboard, six documented synthetic security cases, evidence relationships, source log verification, analyst notes, disposition guardrails, exportable case briefs, automated tests, and an **optional server-side LLM** with constrained structured outputs.
+**[Launch SOC Triage Lab v2.0](https://gamar-rahman.github.io/Soc-triage-lab-AI-assisted-alert-triage-/)**
+
+Explore six simulated cybersecurity incidents, evidence-linked investigations, explainable risk scoring, and human-in-the-loop escalation decisions.
+
+**[GitHub Source Code](https://github.com/Gamar-Rahman/Soc-triage-lab-AI-assisted-alert-triage-)**
+
+
+## Dashboard Preview
+
+![SOC Triage Lab Investigation Dashboard](assets/screenshots/dashboard.png)
+
+The EvidenceGraph dashboard provides a unified investigation workspace with alert prioritization, source-linked evidence, risk explanations, and analyst-controlled escalation decisions.
+
 
 > **Key rule:** **AI recommends. Evidence explains. The analyst decides.**
 >
@@ -107,9 +120,38 @@ CI executes the JavaScript and Python suites, verifies the static build, and che
 
 ## Website and GitHub publishing
 
-The website is ready for GitHub Pages and can be hosted for free as a static training demo. See [deployment steps](docs/deployment.md). The repo includes a **GitHub Pages workflow** that can publish the site when enabled in your repository. An actual new public URL exists **only after you create/push the repository and enable deployment**.
 
-The [original SOC Triage Lab](https://soc-triage-lab.abakerbaba.chatgpt.site) is a separate, earlier demonstration; it is **not automatically updated by this repository**. This rebuilt version needs to be deployed separately.
+## Live Website and GitHub Deployment
+
+### Production of the Static Demo
+
+**Deployment Status: LIVE**
+
+The SOC Triage Lab v2.0 interactive demonstration is publicly available through GitHub Pages.
+
+**Live Website:**
+https://gamar-rahman.github.io/Soc-triage-lab-AI-assisted-alert-triage-/
+
+The website is deployed automatically using GitHub Actions whenever changes are pushed to the main branch.
+
+### Deployment Architecture
+
+- Hosting: GitHub Pages
+- CI/CD: GitHub Actions
+- Frontend: HTML, CSS, JavaScript
+- Demo data: Synthetic security scenarios
+- Risk analysis: Explainable deterministic scoring
+- Optional backend: Python / FastAPI
+- Optional LLM: Server-side integration (not active on GitHub Pages)
+
+The public website operates independently of the optional Python backend.
+
+See [Deployment Documentation](docs/deployment.md) for setup and hosting instructions.
+
+### Previous Version
+
+The [original SOC Triage Lab prototype](https://soc-triage-lab.abakerbaba.chatgpt.site) remains a separate demonstration.
+
 
 ## Source and academic evaluation provenance
 
