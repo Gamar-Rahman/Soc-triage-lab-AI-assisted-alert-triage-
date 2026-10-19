@@ -16,8 +16,9 @@ Explore six simulated cybersecurity incidents, evidence-linked investigations, e
 
 ![SOC Triage Lab Investigation Dashboard](assets/screenshots/dashboard.png)
 
-The EvidenceGraph dashboard provides a unified investigation workspace with alert prioritization, source-linked evidence, risk explanations, and analyst-controlled escalation decisions.
+**EvidenceGraph Investigation Workspace** — An interactive SOC triage dashboard featuring source-linked evidence, explainable risk scoring, six synthetic security scenarios, and analyst-controlled decisions.
 
+[Launch Interactive Demo](https://gamar-rahman.github.io/Soc-triage-lab-AI-assisted-alert-triage-/)
 
 > **Key rule:** **AI recommends. Evidence explains. The analyst decides.**
 >
